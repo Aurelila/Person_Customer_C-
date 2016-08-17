@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PersonCustomer
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void checkButton_Click(object sender, EventArgs e)
+        {
+
+            // Fields
+            string name, address, number;
+            string telephoneNum;
+            bool mailingAdd = true;
+            
+            // If statements
+            if (mailingAdd == true)
+            {
+                mailLabel.Text = "Yes";
+
+            }
+
+            if (mailingAdd == false)
+            {
+                mailLabel.Text = "No";
+            }
+
+
+            // Outputs
+            name = nameTextBox.Text;
+            address = addressTextBox.Text;
+            telephoneNum = telephoneTextBox.Text;
+            number = numberTextBox.Text;
+
+            personLabel.Text = name;
+            addressLabel.Text = address;
+            teleLabel.Text = telephoneNum;
+            numLabel.Text = number;
+
+
+
+            
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // Close the form
+            this.Close();
+        }
+
+
+            }
+    }
